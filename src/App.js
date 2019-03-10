@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import View from './map.js'
+import Canvas from './Canvas.js'
 import './App.css';
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <View/>
+      <div>
+        <Canvas />
       </div>
     );
   }
