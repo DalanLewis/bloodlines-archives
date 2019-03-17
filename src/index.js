@@ -1,12 +1,77 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React, { Component } from 'react';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+export default class Cards extends Component {
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+    [
+        {
+            name: "Apple",
+            effect: "playerHealth += 1"
+        },
+        {
+            name: "Wood",
+            effect: "Use to build a Light Settlement"
+        },
+        {
+            name: "Water",
+            effect: "Use to create a Nature settlement"
+        },
+        {
+            name: "Stone",
+            effect: "Use to build a Dark settlement"
+        },
+        {
+            name: "",
+            effect: ""
+        },
+        {
+            name: "",
+            effect: ""
+        },
+        {
+            name: "",
+            effect: ""
+        },
+        {
+            name: "",
+            effect: ""
+        },
+        {
+            name: "",
+            effect: ""
+        },
+        {
+            name: "",
+            effect: ""
+        },
+        {
+            name: "",
+            effect: ""
+        },
+        {
+            name: "",
+            effect: ""
+        },
+        {
+            name: "",
+            effect: ""
+        },
+        {
+            name: "",
+            effect: ""
+        },
+        {
+            name: "",
+            effect: ""
+        },
+        {
+            name: "",
+            effect: ""
+        },
+        {
+            name: "",
+            effect: ""
+        }
+    ]
+            
+        
+}
