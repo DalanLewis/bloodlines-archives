@@ -45,7 +45,7 @@ export default class bQ extends Component {
 
     requirementPrimer = (e) => {
         this.setState({
-            key: e.getAttribute('value')
+            key: e.target.getAttribute('value')
         })
         console.log(this.state.key)
     }
@@ -66,7 +66,8 @@ export default class bQ extends Component {
     // "structure"
     // "level"
 
-    myFunction = () => {
+    myFunction = (e) => {
+        e.preventDefault();
         document.getElementById("myDropdown").classList.toggle("show");
     };
 
