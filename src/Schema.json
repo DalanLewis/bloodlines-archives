@@ -1,0 +1,49 @@
+{
+    "$schema": "./Schema.json",
+    "title": "Quest Card",
+    "description": "A composite of variables and descriptions that bring an effect to the game state",
+    "type": "object",
+    "properties": {
+        "name": {
+            "description": "Cards title or identifyer",
+            "type": "string"
+        },
+        "requirement": {
+            "description": "some pre-set choices of what the quest card can target, this will be presented in the form of a drop-down list in the UI",
+            "type": "string",
+            "options": {
+                "location": "three co-ordinates that represent a single tile the row co-ordinate, X column co-ordinate, and the Y column co-ordinate are all required",
+                "item card": "Players can choose an item card as the requirement for creating a quest card",
+                "trait card": "players can choose a trait card as the requirement for creating a quest card",
+                "structure": "Players can choose structures as the requirement for creating a quest card",
+                "level": "expects a number Players can provide level requirements that must be met before the quest card can be used"
+            }
+        },
+        "objective": 
+        {
+            "description": "this will be the subject of the quest itself",
+            "type": "string",
+            "task": {
+                "destroy": "remove the target from the DB",
+                "build": "create the target in the DB",
+                "upgrade": "update the target from the DB",
+                "locate": "find the targets location in the DB"
+            },
+            "target": {
+                "item card": "pre-fabricated cards that are stored in the DB",
+                "trait card": "pre-fabricated cards that are stored in the DB",
+                "structure": "objects stored at co-ordinates on the DB",
+                "character": "a being player or non-player in the DB",
+                "location": "Co-ordinates for a tile",
+                "quest": "Another quest cards name"
+            }
+        },
+        "details":
+        {
+            "description": "The quest card creators description of the quest",
+            "type": "string"
+
+        },
+        "requires": "name, requirement, objective (both task and target), details"
+    }
+}

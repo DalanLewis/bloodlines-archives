@@ -4,6 +4,9 @@ import React, { Component } from 'react';
 
 // https://www.youtube.com/watch?v=BfDUva8MvKw
 
+
+//define the object (hex)
+
 export default class Canvas extends Component {
     constructor(props) {
         //Look up super props
@@ -31,10 +34,12 @@ export default class Canvas extends Component {
     drawHexes() {
         for (let r = 0; r <= 10; r++) {
             for (let q = 0; q <= 10; q++) {
+                
                 console.log(r, q)
                 let center = this.hexToPixel(this.hex(q, r));
                 this.drawHex(this.canvasHex, center);
                 this.drawHexCoordinates(this.canvasHex, center, this.hex(q, r));
+                
             }
         }
     }
@@ -84,6 +89,9 @@ export default class Canvas extends Component {
         ctx.fillText(h.q, center.x-15, center.y );
         ctx.fillText(h.r, center.x+15, center.y)
     }
+
+
+        
 
     render() {
         return (
